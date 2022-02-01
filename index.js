@@ -109,17 +109,17 @@ export default class SortableList {
   	if(!elemBelow) return;
   	const itemBelow = elemBelow.closest('.sortable-list__item');  	
   	if(itemBelow){
-  		const { top, bottom } = itemBelow.getBoundingClientRect();
-      const { offsetHeight: height } = itemBelow;
-        if (clientY > top && clientY < bottom) {
-            if (clientY < top + height / 2) {
-              itemBelow.before(this.placeholder);
-            } 
-            else{
-             itemBelow.after(this.placeholder);
-            }
-        }
-  	} 	
+		const { top, bottom } = itemBelow.getBoundingClientRect();
+      	const { offsetHeight: height } = itemBelow;
+			if (clientY > top && clientY < bottom) {
+				if (clientY < top + height / 2) {
+				itemBelow.before(this.placeholder);
+				} 
+				else{
+				itemBelow.after(this.placeholder);
+				}
+			}
+	} 	
   }
 
   scrollIfCloseToWindowEdge(clientY){

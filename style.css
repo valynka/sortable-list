@@ -38,6 +38,7 @@
   margin: 16px 0;
   position: relative;
   box-sizing: border-box;
+  touch-action: none;
 }
 
 .sortable-list__item[data-grab-handle],
